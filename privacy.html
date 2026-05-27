@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<script>
+(function(){
+  if(sessionStorage.getItem('lang_override'))return;
+  var l=(navigator.language||'').toLowerCase();
+  if(l.startsWith('en')){
+    location.replace(location.origin+'/en'+location.pathname);
+  }
+})();
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Политика конфиденциальности — AI Photo в Telegram</title>
+  <meta name="robots" content="noindex, follow">
+  <link rel="alternate" hreflang="ru" href="https://aiplatformimage.online/privacy.html">
+  <link rel="alternate" hreflang="en" href="https://aiplatformimage.online/en/privacy.html">
+  <link rel="alternate" hreflang="x-default" href="https://aiplatformimage.online/privacy.html">
+  <link rel="stylesheet" href="css/style.css?v=15">
+</head>
+<body>
+
+<header class="site-header" id="header">
+  <div class="header-inner">
+    <a href="index.html" class="header-logo">
+      <span class="header-logo-icon">AI</span>
+      AI Photo
+    </a>
+    <div class="header-cta-desktop">
+      <a href="index.html" class="btn btn-secondary btn-sm">На главную</a>
+      <a href="en/privacy.html" class="lang-switch" onclick="sessionStorage.setItem('lang_override','1')">EN</a>
+    </div>
+  </div>
+</header>
+
+<main class="legal-page">
+  <div class="container legal-content">
+    <a href="index.html" class="back-link">← На главную</a>
+    <h1>Политика конфиденциальности</h1>
+    <p><em>Дата последнего обновления: 20 мая 2026 г.</em></p>
+
+    <p>Настоящая Политика конфиденциальности объясняет, как сервис AI Photo («Сервис», «мы», «наш») обрабатывает информацию при использовании вами нашего сайта и Telegram-бота.</p>
+
+    <h2>1. Какие данные мы обрабатываем</h2>
+    <p>Сервис может обрабатывать следующие данные:</p>
+    <p>- Изображения, загруженные пользователем для генерации AI-фото.<br>
+    - Идентификатор пользователя в Telegram (Telegram User ID).<br>
+    - Технические данные: IP-адрес, user-agent, временные метки запросов.<br>
+    - Данные аналитики: информация о посещении страниц сайта (через Google Analytics / Яндекс Метрику).</p>
+
+    <h2>2. Как мы используем данные</h2>
+    <p>- Загруженные изображения используются исключительно для выполнения запроса пользователя (генерация AI-фото) и временно хранятся в течение технически необходимого периода.<br>
+    - Telegram User ID используется для идентификации пользователя в боте и предоставления доступа к функциям сервиса.<br>
+    - Данные аналитики используются для улучшения работы сервиса и анализа трафика.</p>
+
+    <h2>3. Telegram-бот</h2>
+    <p>Основная функциональность сервиса реализована через Telegram-бота. При использовании бота применяются политика конфиденциальности Telegram и настоящая Политика. Данные обрабатываются в соответствии с условиями Telegram Platform.</p>
+
+    <h2>4. Публикация результатов</h2>
+    <p>Результаты генерации НЕ публикуются автоматически. Пользователь самостоятельно принимает решение о публикации изображения в публичных разделах форума. До момента публикации изображение доступно только пользователю.</p>
+
+    <h2>5. Передача данных третьим лицам</h2>
+    <p>Мы не продаём и не передаём пользовательские данные третьим лицам, за исключением случаев, предусмотренных законодательством. Сервис может использовать сторонние инструменты аналитики (Google Analytics, Яндекс Метрика), которые обрабатывают обезличенные данные о посещениях.</p>
+
+    <h2>6. Хранение данных</h2>
+    <p>Данные хранятся в течение срока, необходимого для предоставления функциональности сервиса. Пользователь может запросить удаление своих данных, обратившись через Telegram-бота или контактную информацию ниже.</p>
+
+    <h2>7. Файлы cookie</h2>
+    <p>Сайт может использовать технические cookie для обеспечения корректной работы. Cookie аналитики используются для сбора обезличенной статистики посещений.</p>
+
+    <h2>8. Контакты</h2>
+    <p>По всем вопросам, связанным с обработкой данных, вы можете обратиться через Telegram-бота или форум сервиса.</p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <p>&copy; 2026 AI Photo. Все права защищены.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

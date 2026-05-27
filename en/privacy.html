@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+(function(){
+  if(sessionStorage.getItem('lang_override'))return;
+  var l=(navigator.language||'').toLowerCase();
+  if(l.startsWith('ru')){
+    location.replace(location.origin+location.pathname.replace('/en/','/'));
+  }
+})();
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — AI Photo in Telegram</title>
+  <meta name="robots" content="noindex, follow">
+  <link rel="alternate" hreflang="ru" href="https://aiplatformimage.online/privacy.html">
+  <link rel="alternate" hreflang="en" href="https://aiplatformimage.online/en/privacy.html">
+  <link rel="alternate" hreflang="x-default" href="https://aiplatformimage.online/privacy.html">
+  <link rel="stylesheet" href="../css/style.css?v=15">
+</head>
+<body>
+
+<header class="site-header" id="header">
+  <div class="header-inner">
+    <a href="../index.html" class="header-logo">
+      <span class="header-logo-icon">AI</span>
+      AI Photo
+    </a>
+    <div class="header-cta-desktop">
+      <a href="../index.html" class="btn btn-secondary btn-sm">Home</a>
+      <a href="https://aiplatformimage.online/privacy.html" class="lang-switch" onclick="sessionStorage.setItem('lang_override','1')">RU</a>
+    </div>
+  </div>
+</header>
+
+<main class="legal-page">
+  <div class="container legal-content">
+    <a href="../index.html" class="back-link">&#8592; Back</a>
+    <h1>Privacy Policy</h1>
+    <p><em>Last updated: May 20, 2026</em></p>
+
+    <p>This Privacy Policy explains how the AI Photo service ("Service," "we," "our") processes information when you use our website and Telegram bot.</p>
+
+    <h2>1. What Data We Process</h2>
+    <p>The Service may process the following data:</p>
+    <p>- Images uploaded by the user for AI photo generation.<br>
+    - Telegram User ID.<br>
+    - Technical data: IP address, user-agent, request timestamps.<br>
+    - Analytics data: information about website page visits (via Google Analytics / Yandex Metrica).</p>
+
+    <h2>2. How We Use Data</h2>
+    <p>- Uploaded images are used solely to fulfill the user's request (AI photo generation) and are temporarily stored for the technically necessary period.<br>
+    - Telegram User ID is used to identify the user in the bot and provide access to service features.<br>
+    - Analytics data is used to improve the service and analyze traffic.</p>
+
+    <h2>3. Telegram Bot</h2>
+    <p>The main functionality of the service is implemented through the Telegram bot. When using the bot, both the Telegram Privacy Policy and this Policy apply. Data is processed in accordance with the Telegram Platform terms.</p>
+
+    <h2>4. Publishing Results</h2>
+    <p>Generation results are NOT published automatically. The user independently decides whether to publish the image in the public sections of the forum. Until publication, the image is accessible only to the user.</p>
+
+    <h2>5. Data Transfer to Third Parties</h2>
+    <p>We do not sell or transfer user data to third parties, except as required by law. The Service may use third-party analytics tools (Google Analytics, Yandex Metrica), which process anonymized visit data.</p>
+
+    <h2>6. Data Storage</h2>
+    <p>Data is stored for the period necessary to provide the service functionality. The user can request deletion of their data by contacting us through the Telegram bot or the contact information below.</p>
+
+    <h2>7. Cookies</h2>
+    <p>The website may use technical cookies to ensure proper functionality. Analytics cookies are used to collect anonymized visit statistics.</p>
+
+    <h2>8. Contacts</h2>
+    <p>For any data processing questions, you can contact us through the Telegram bot or the service forum.</p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <p>&copy; 2026 AI Photo. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

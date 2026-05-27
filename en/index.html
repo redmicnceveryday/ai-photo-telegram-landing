@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+(function(){
+  if(sessionStorage.getItem('lang_override'))return;
+  var l=(navigator.language||'').toLowerCase();
+  if(l.startsWith('ru')){
+    location.replace(location.origin+location.pathname.replace('/en/','/'));
+  }
+})();
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+
+  <title>AI Photos in Telegram — Photoshoots, Avatars, Product Cards &amp; Photo Restoration</title>
+  <meta name="description" content="Create AI photos in Telegram: recreate stunning looks with your own face, restore old photos, make product cards and images from your own prompts.">
+  <meta name="keywords" content="AI photo, neural network photo, AI photoshoot, photo restoration, AI avatar, product card, Telegram bot, AI images">
+
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://aiplatformimage.online/en/">
+  <link rel="alternate" hreflang="ru" href="https://aiplatformimage.online/">
+  <link rel="alternate" hreflang="en" href="https://aiplatformimage.online/en/">
+  <link rel="alternate" hreflang="x-default" href="https://aiplatformimage.online/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AI Photos in Telegram">
+  <meta property="og:description" content="Recreate a beautiful look, restore a photo or generate an image from your own prompt.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aiplatformimage.online/en/">
+  <meta property="og:image" content="https://aiplatformimage.online/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ru_RU">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Photos in Telegram">
+  <meta name="twitter:description" content="Recreate a beautiful look, restore a photo or generate an image from your own prompt.">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://aiplatformimage.online/en/#website",
+        "url": "https://aiplatformimage.online/en/",
+        "name": "AI Photo in Telegram",
+        "description": "AI photos in Telegram for you, your business and ideas.",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://aiplatformimage.online/en/#software",
+        "name": "AI Photo in Telegram",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "Telegram",
+        "description": "Telegram service for creating AI photos, AI photoshoots, avatars, product cards, photo restoration and images from prompts.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "description": "Go to Telegram. Payment for generations may occur inside the service."
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://aiplatformimage.online/en/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Do I need to know how to write prompts?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. You can pick a ready-made example and recreate it with your own appearance. If you know how to write prompts, you can create an image from your own request."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where does the generation happen?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "In the Telegram bot. The website shows what is possible and quickly takes you to Telegram."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I create product photos?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. You can create product cards, still-life visuals and images for ads, marketplaces, websites and social media."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I restore an old photo?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. You can use AI scenarios to improve old, blurry or damaged photos."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are my photos published automatically?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Results are only published if you choose to. After generation you can save, delete, regenerate or publish the image."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the Sandbox?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It is a section where users can submit their own ideas and images. If the community likes a piece, it can be promoted to the public catalog."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does the creator get bonuses?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. If a user scenario becomes popular and enters the catalog, the creator can receive bonuses for its usage."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I create an image from my own prompt?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. There is a custom prompt mode for advanced users."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I do an AI photoshoot?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Pick a ready-made photoshoot style, upload your photo and get an image in the chosen look."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is the service suitable for business?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. The service can be used for product cards, still-life photography, ad images and social media content."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Content Config -->
+  <script type="application/json" id="content-config">
+  {
+    "telegram": {
+      "botUrl": "https://t.me/ai_platform_image_bot",
+      "forumUrl": "https://t.me/ai_platform_image"
+    },
+    "images": {
+      "enabled": true,
+      "basePath": "../images/"
+    }
+  }
+  </script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../css/style.css?v=15">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%232AABEE'/><text x='16' y='22' text-anchor='middle' fill='white' font-size='18' font-family='sans-serif' font-weight='bold'>AI</text></svg>">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-W935FF33');</script>
+  <!-- End Google Tag Manager -->
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W935FF33"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- ============================================================
+   HEADER
+   ============================================================ -->
+<header class="site-header" id="header">
+  <div class="header-inner">
+    <a href="#" class="header-logo" aria-label="AI Photo — Home">
+      <span class="header-logo-icon">AI</span>
+      AI Photo
+    </a>
+
+    <nav class="header-nav" aria-label="Main navigation">
+      <a href="#examples">Examples</a>
+      <a href="#features">Features</a>
+      <a href="#popular">Popular</a>
+      <a href="#business">For Business</a>
+      <a href="#creators">Creators</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <a href="https://aiplatformimage.online/" class="lang-switch lang-switch-desktop" aria-label="Russian version"
+       onclick="sessionStorage.setItem('lang_override','1')">RU</a>
+
+    <div class="header-cta-desktop">
+      <a href="https://t.me/ai_platform_image_bot" class="btn btn-primary btn-sm"
+         data-event="click_telegram_header">Open Telegram</a>
+    </div>
+
+    <div class="header-cta-mobile">
+      <a href="https://t.me/ai_platform_image_bot" class="btn btn-primary btn-sm"
+         data-event="click_telegram_header">Telegram</a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+  <a href="#examples">Examples</a>
+  <a href="#features">Features</a>
+  <a href="#popular">Popular</a>
+  <a href="#business">For Business</a>
+  <a href="#creators">Creators</a>
+  <a href="#faq">FAQ</a>
+  <a href="https://t.me/ai_platform_image_bot" class="btn btn-primary" data-event="click_telegram_header">
+    Open in Telegram
+  </a>
+  <a href="https://aiplatformimage.online/" class="lang-switch" onclick="sessionStorage.setItem('lang_override','1')">Русский</a>
+</nav>
+
+<main>
+  <!-- ============================================================
+     HERO
+     ============================================================ -->
+  <section class="hero-section" id="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="container hero-content">
+
+      <div class="hero-text anim-fade">
+        <h1 class="hero-title">AI Photos in <span class="accent">Telegram</span> for&nbsp;you, business and&nbsp;ideas</h1>
+        <p class="hero-subtitle">Recreate a beautiful look with your own face, restore an old photo, do an AI photoshoot or make a product card — no complicated software or extra settings.</p>
+
+        <div class="btn-group">
+          <a href="https://t.me/ai_platform_image" class="btn btn-primary btn-lg" data-event="click_telegram_hero">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.46-1.901-.903-1.056-.692-1.653-1.123-2.678-1.799-1.185-.781-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.015-.15-.055-.212s-.174-.05-.249-.029c-.105.024-1.785 1.135-5.039 3.332-.477.328-.909.487-1.296.479-.426-.01-1.246-.241-1.855-.44-.747-.243-1.342-.371-1.29-.784.027-.215.324-.435.889-.66 3.484-1.519 5.807-2.522 6.968-3.008 3.318-1.38 4.008-1.62 4.458-1.628.099-.002.32.023.464.139.12.098.153.228.169.32.016.092.036.302.02.466z"/></svg>
+            Go to Forum
+          </a>
+          <a href="#examples" class="btn btn-secondary btn-lg" data-event="click_hero_examples">See Examples</a>
+        </div>
+
+        <p class="hero-micro">No prompts — if you don't want to. With your own prompt — if you're a pro.</p>
+      </div>
+
+      <div class="hero-visual anim-fade">
+        <div class="hero-grid">
+          <!-- 1. AI Photoshoot (Aqua Blossom) -->
+          <a href="https://t.me/ai_platform_image_bot?start=scenario_aqua-blossom" class="hero-card" data-event="click_example_card" data-card="ai_photoshoot">
+            <img src="../images/examples/ai-photoshoot.webp" alt="AI photoshoot with different looks for social media" loading="eager">
+            <div class="hero-card-overlay"><span>I want this too</span></div>
+            <span class="hero-card-label">AI Photoshoot</span>
+          </a>
+          <!-- 2. Restore Photo (Photo Restoration) -->
+          <a href="https://t.me/ai_platform_image_bot?start=scenario_photo-restoration" class="hero-card" data-event="click_example_card" data-card="restore_photo">
+            <img src="../images/examples/restore-photo.webp" alt="Old family photo restored with AI" loading="eager">
+            <div class="hero-card-overlay"><span>I want this too</span></div>
+            <span class="hero-card-label">Old Photo</span>
+          </a>
+          <!-- 3. Product Card -->
+          <a href="https://t.me/ai_platform_image_bot?start=scenario_product-card" class="hero-card" data-event="click_example_card" data-card="product_card">
+            <img src="../images/examples/product-card.webp" alt="Product card for a marketplace, created with AI" loading="eager">
+            <div class="hero-card-overlay"><span>I want this too</span></div>
+            <span class="hero-card-label">Product Card</span>
+          </a>
+          <!-- 4. Avatar (2D Pixar Avatar) -->
+          <a href="https://t.me/ai_platform_image_bot?start=scenario_2d-pixar-avatar" class="hero-card" data-event="click_example_card" data-card="avatar">
+            <img src="../images/examples/avatar.webp" alt="AI avatar for Telegram from a photo" loading="eager">
+            <div class="hero-card-overlay"><span>I want this too</span></div>
+            <span class="hero-card-label">Avatar</span>
+          </a>
+          <!-- 5. Fashion Look -->
+          <a href="https://t.me/ai_platform_image_bot?start=scenario_fashion-look" class="hero-card" data-event="click_example_card" data-card="fashion">
+            <img src="../images/examples/fashion-look.webp" alt="Fashion look created by AI" loading="eager">
+            <div class="hero-card-overlay"><span>I want this too</span></div>
+            <span class="hero-card-label">Fashion Look</span>
+          </a>
+          <!-- 6. Own Prompt (free input) -->
+          <a href="https://t.me/ai_platform_image_bot" class="hero-card" data-event="click_example_card" data-card="own_prompt">
+            <img src="../images/examples/own-prompt.webp" alt="Create an image from your own prompt" loading="eager">
+            <div class="hero-card-overlay"><span>I want this too</span></div>
+            <span class="hero-card-label">Own Prompt</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+     GALLERY (#examples)
+     ============================================================ -->
+  <section class="section" id="examples">
+    <div class="container">
+      <div class="section-header anim-fade">
+        <h2 class="section-title">AI Photo Examples</h2>
+        <p class="section-subtitle">Pick a ready-made example and recreate it with your own appearance. Create a portrait, avatar, photoshoot, product visual, restore an old photo or generate an image from your own prompt.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- 1. AI Photoshoot (Aqua Blossom) -->
+        <div class="gallery-card anim-fade">
+          <a href="https://t.me/ai_platform_image_bot?start=scenario_aqua-blossom" class="gallery-card-overlay" data-event="click_example_card" data-card="ai_photoshoot">
+            <span>I want this too</span>
+          </a>
+          <div class="gallery-card-img">
+            <img src="../images/examples/ai-photoshoot.webp" alt="AI photoshoot with different looks for social media" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <h3 class="gallery-card-title">AI Photoshoot</h3>
+            <div class="gallery-card-tags">
+              <span class="tag">#portrait</span><span class="tag">#look</span><span class="tag">#social</span>
+            </div>
+            <a href="https://t.me/ai_platform_image/241/284" class="btn btn-primary btn-sm" data-event="click_example_card" data-card="ai_photoshoot">I want this too</a>
+          </div>
+        </div>
+
+        <!-- 2. Recreate Look (Retro Cola Glam) -->
+        <div class="gallery-card anim-fade">
+          <a href="https://t.me/ai_platform_image_bot?start=scenario_retro-cola-glam" class="gallery-card-overlay" data-event="click_example_card" data-card="repeat_look">
+            <span>Recreate with me</span>
+          </a>
+          <div class="gallery-card-img">
+            <img src="../images/examples/repeat-look.webp" alt="Recreate a beautiful look with your own face" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <h3 class="gallery-card-title">Recreate Look</h3>
+            <div class="gallery-card-tags">
+              <span class="tag">#style</span><span class="tag">#face</span><span class="tag">#example</span>
+            </div>
+            <a href="https://t.me/ai_platform_image/240/281" class="btn btn-primary btn-sm" data-event="click_example_card" data-card="repeat_look">Recreate with me</a>
+          </div>
+        </div>
+
+        <!-- 3. Restore Photo (Photo Restoration) -->
+        <div class="gallery-card anim-fade">
+          <a href="https://t.me/ai_platform_image_bot?start=scenario_photo-restoration" class="gallery-card-overlay" data-event="click_example_card" data-card="restore_photo">
+            <span>Restore Photo</span>
+          </a>
+          <div class="gallery-card-img">
+            <img src="../images/examples/restore-photo.webp" alt="Old family photo restored with AI" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <h3 class="gallery-card-title">Restore Photo</h3>
+            <div class="gallery-card-tags">
+              <span class="tag">#archive</span><span class="tag">#family</span><span class="tag">#enhancement</span>
+            </div>
+            <a href="https://t.me/ai_platform_image/237/278" class="btn btn-primary btn-sm" data-event="click_example_card" data-card="restore_photo">Restore Photo</a>
+          </div>
+        </div>
+
+        <!-- 4. AI Avatar (2D Pixar Avatar) -->
+        <div class="gallery-card anim-fade">
+          <a href="https://t.me/ai_platform_image_bot?start=scenario_2d-pixar-avatar" class="gallery-card-overlay" data-event="click_example_card" data-card="avatar">
+            <span>Create Avatar</span>
+          </a>
+          <div class="gallery-card-img">
+            <img src="../images/examples/avatar.webp" alt="AI avatar for Telegram from a photo" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <h3 class="gallery-card-title">AI Avatar</h3>
+            <div class="gallery-card-tags">
+              <span class="tag">#telegram</span><span class="tag">#profile</span><span class="tag">#portrait</span>
+            </div>
+            <a href="https://t.me/ai_platform_image/241/285" class="btn btn-primary btn-sm" data-event="click_example_card" data-card="avatar">Create Avatar</a>
+          </div>
+        </div>
+
+        <!-- 5. Product Card -->
+        <div class="gallery-card anim-fade">
+          <a href="https://t.me/ai_platform_image_bot?start=scenario_product-card" class="gallery-card-overlay" data-event="click_example_card" data-card="product_card">
+            <span>Create Card</span>
+          </a>
+          <div class="gallery-card-img">
+            <img src="../images/examples/product-card.webp" alt="Product card for a marketplace, created with AI" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <h3 class="gallery-card-title">Product Card</h3>
+            <div class="gallery-card-tags">
+              <span class="tag">#marketplace</span><span class="tag">#product</span><span class="tag">#advertising</span>
+            </div>
+            <a href="https://t.me/ai_platform_image/236/293" class="btn btn-primary btn-sm" data-event="click_example_card" data-card="product_card">Create Card</a>
+          </div>
+        </div>
+
+        <!-- 6. Product Photography (Product Cinematics) -->
+        <div class="gallery-card anim-fade">
+          <a href="https://t.me/ai_platform_image_bot?start=scenario_product-cinematics" class="gallery-card-overlay" data-event="click_example_card" data-card="product_photo">
+            <span>Create Photo</span>
+          </a>
+          <div class="gallery-card-img">
+            <img src="../images/examples/product-photo.webp" alt="Product photography for a marketplace — AI product photo" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <h3 class="gallery-card-title">Product Photography</h3>
+            <div class="gallery-card-tags">
+              <span class="tag">#ecommerce</span><span class="tag">#background</span><span class="tag">#content</span>
+            </div>
+            <a href="https://t.me/ai_platform_image/236/282" class="btn btn-primary btn-sm" data-event="click_example_card" data-card="product_photo">Create Photo</a>
+          </div>
+        </div>
+
+        <!-- 7. Cinematic Portrait (Storm Calm) -->
+        <div class="gallery-card anim-fade">
+          <a href="https://t.me/ai_platform_image_bot?start=scenario_storm-calm" class="gallery-card-overlay" data-event="click_example_card" data-card="cinematic_portrait">
+            <span>I want this too</span>
+          </a>
+          <div class="gallery-card-img">
+            <img src="../images/examples/cinematic.webp" alt="Cinematic portrait in retro style with AI processing" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <h3 class="gallery-card-title">Cinematic Portrait</h3>
+            <div class="gallery-card-tags">
+              <span class="tag">#retro</span><span class="tag">#cinema</span><span class="tag">#look</span>
+            </div>
+            <a href="https://t.me/ai_platform_image/241/286" class="btn btn-primary btn-sm" data-event="click_example_card" data-card="cinematic_portrait">I want this too</a>
+          </div>
+        </div>
+
+        <!-- 8. Own Prompt (free input) -->
+        <div class="gallery-card anim-fade">
+          <a href="https://t.me/ai_platform_image_bot" class="gallery-card-overlay" data-event="click_example_card" data-card="own_prompt">
+            <span>Create from Prompt</span>
+          </a>
+          <div class="gallery-card-img">
+            <img src="../images/examples/own-prompt.webp" alt="Create an image from your own prompt — unlimited AI possibilities" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <h3 class="gallery-card-title">Own Prompt</h3>
+            <div class="gallery-card-tags">
+              <span class="tag">#prompt</span><span class="tag">#creator</span><span class="tag">#idea</span>
+            </div>
+            <a href="https://t.me/ai_platform_image" class="btn btn-primary btn-sm" data-event="click_example_card" data-card="own_prompt">Create from Prompt</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     FEATURES (#features)
+     ============================================================ -->
+  <section class="section" id="features" style="background: var(--bg-alt)">
+    <div class="container">
+      <div class="section-header anim-fade">
+        <h2 class="section-title">What You Can Do</h2>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card anim-fade">
+          <div class="feature-icon blue">&#9998;</div>
+          <h3>Recreate a Beautiful Look</h3>
+          <p>Saw a stunning AI image — make one just like it with your own face.</p>
+          <a href="https://t.me/ai_platform_image/239" class="btn btn-primary btn-sm" data-event="click_feature_card" data-card="repeat_look">Pick a Look</a>
+        </div>
+
+        <div class="feature-card anim-fade">
+          <div class="feature-icon violet">&#128247;</div>
+          <h3>Do an AI Photoshoot</h3>
+          <p>Get a series of photos in different styles without a studio, photographer or lengthy prep.</p>
+          <a href="https://t.me/ai_platform_image/240" class="btn btn-primary btn-sm" data-event="click_feature_card" data-card="ai_photoshoot">Browse Looks</a>
+        </div>
+
+        <div class="feature-card anim-fade">
+          <div class="feature-icon pink">&#128190;</div>
+          <h3>Restore an Old Photo</h3>
+          <p>Improve an old, blurry or damaged photo with AI.</p>
+          <a href="https://t.me/ai_platform_image/237" class="btn btn-primary btn-sm" data-event="click_feature_card" data-card="restore_photo">Restore Photo</a>
+        </div>
+
+        <div class="feature-card anim-fade">
+          <div class="feature-icon cream">&#128722;</div>
+          <h3>Create a Product Card</h3>
+          <p>Turn an ordinary product photo into a clean visual for a marketplace, website or ad.</p>
+          <a href="https://t.me/ai_platform_image/236" class="btn btn-primary btn-sm" data-event="click_feature_card" data-card="product_card">Create Card</a>
+        </div>
+
+        <div class="feature-card anim-fade">
+          <div class="feature-icon green">&#128100;</div>
+          <h3>Make an Avatar or Portrait</h3>
+          <p>Create a profile picture, business portrait or bright avatar for social media.</p>
+          <a href="https://t.me/ai_platform_image/241" class="btn btn-primary btn-sm" data-event="click_feature_card" data-card="avatar">Create Avatar</a>
+        </div>
+
+        <div class="feature-card anim-fade">
+          <div class="feature-icon gray">&#128161;</div>
+          <h3>Write Your Own Prompt</h3>
+          <p>Create an image from your own idea and submit it to the sandbox for voting.</p>
+          <a href="https://t.me/ai_platform_image_bot" class="btn btn-primary btn-sm" data-event="click_feature_card" data-card="own_prompt">Create from Prompt</a>
+        </div>
+      </div>
+
+      <p class="features-note">...and other photo tasks — inside Telegram</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     HOW IT WORKS (#how-it-works)
+     ============================================================ -->
+  <section class="section" id="how-it-works">
+    <div class="container">
+      <div class="section-header anim-fade">
+        <h2 class="section-title">How It Works</h2>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card anim-fade">
+          <div class="step-number">1</div>
+          <h3>Pick an Example</h3>
+          <p>The gallery and Telegram forum are full of ready-made looks, styles and scenarios.</p>
+          <span class="steps-arrow" aria-hidden="true">&#8594;</span>
+        </div>
+
+        <div class="step-card anim-fade">
+          <div class="step-number">2</div>
+          <h3>Tap "I Want This Too"</h3>
+          <p>The bot will open the right scenario automatically.</p>
+          <span class="steps-arrow" aria-hidden="true">&#8594;</span>
+        </div>
+
+        <div class="step-card anim-fade">
+          <div class="step-number">3</div>
+          <h3>Upload a Photo and Get the Result</h3>
+          <p>The service creates your version of the image right inside Telegram.</p>
+        </div>
+      </div>
+
+      <div class="steps-note anim-fade">
+        If you know how to write prompts — start with your own request
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     POPULAR (#popular) — DARK BLOCK
+     ============================================================ -->
+  <section class="section section-dark" id="popular">
+    <div class="container">
+      <div class="section-header anim-fade">
+        <h2 class="section-title">Trending Now</h2>
+      </div>
+
+      <div class="popular-grid">
+        <!-- Glossy Photoshoot -->
+        <a href="https://t.me/ai_platform_image_bot?start=scenario_glossy-photoshoot" class="popular-card anim-fade" data-event="click_popular_card" data-card="glossy_photoshoot">
+          <div class="popular-card-img">
+            <img src="../images/popular/glossy-photoshoot.webp" alt="AI photoshoot in glossy magazine style" loading="lazy">
+          </div>
+          <div class="popular-card-body">
+            <h3>AI Photoshoot in Glossy Magazine Style</h3>
+            <p>Professional photos without a studio</p>
+            <span class="popular-card-cta">Try It &#8594;</span>
+          </div>
+        </a>
+
+        <!-- Family Restore (Family Portrait) -->
+        <a href="https://t.me/ai_platform_image_bot?start=scenario_photo-restoration" class="popular-card anim-fade" data-event="click_popular_card" data-card="family_restore">
+          <div class="popular-card-img">
+            <img src="../images/popular/family-restore.webp" alt="Old family photo restored with neural network" loading="lazy">
+          </div>
+          <div class="popular-card-body">
+            <h3>Old Family Photo Restoration</h3>
+            <p>Restoration, color, quality improvement</p>
+            <span class="popular-card-cta">Try It &#8594;</span>
+          </div>
+        </a>
+
+        <!-- Product Card -->
+        <a href="https://t.me/ai_platform_image_bot?start=scenario_product-card" class="popular-card anim-fade" data-event="click_popular_card" data-card="product_card_popular">
+          <div class="popular-card-img">
+            <img src="../images/popular/product-card.webp" alt="Product card for a marketplace with AI processing" loading="lazy">
+          </div>
+          <div class="popular-card-body">
+            <h3>Product Card for Marketplaces</h3>
+            <p>Make your product photo cleaner, pricier and more eye-catching</p>
+            <span class="popular-card-cta">Try It &#8594;</span>
+          </div>
+        </a>
+
+        <!-- Cinematic Portrait (Cinematic Beam) -->
+        <a href="https://t.me/ai_platform_image_bot?start=scenario_cinematic-beam" class="popular-card anim-fade" data-event="click_popular_card" data-card="cinematic_portrait_popular">
+          <div class="popular-card-img">
+            <img src="../images/popular/cinematic-portrait.webp" alt="Cinematic portrait with retro AI effect" loading="lazy">
+          </div>
+          <div class="popular-card-body">
+            <h3>Cinematic Portrait</h3>
+            <p>Portrait in cinema, retro or glossy photography style</p>
+            <span class="popular-card-cta">Try It &#8594;</span>
+          </div>
+        </a>
+
+        <!-- Profile Photo -->
+        <a href="https://t.me/ai_platform_image_bot?start=scenario_profile-photo" class="popular-card anim-fade" data-event="click_popular_card" data-card="profile_photo">
+          <div class="popular-card-img">
+            <img src="../images/popular/profile-photo.webp" alt="Profile photo for Telegram, created with AI" loading="lazy">
+          </div>
+          <div class="popular-card-body">
+            <h3>Profile Photo for Telegram</h3>
+            <p>Avatars for social media and Telegram</p>
+            <span class="popular-card-cta">Try It &#8594;</span>
+          </div>
+        </a>
+
+        <!-- Prompt Sandbox (Doodle Art) -->
+        <a href="https://t.me/ai_platform_image_bot?start=scenario_doodle-art-preview" class="popular-card anim-fade" data-event="click_popular_card" data-card="prompt_sandbox">
+          <div class="popular-card-img">
+            <img src="../images/popular/prompt-sandbox.webp" alt="Prompt sandbox — create your own idea and submit it for voting" loading="lazy">
+          </div>
+          <div class="popular-card-body">
+            <h3>Own Prompt in the Sandbox</h3>
+            <p>Create ideas and submit them for voting</p>
+            <span class="popular-card-cta">Try It &#8594;</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     BUSINESS (#business)
+     ============================================================ -->
+  <section class="section" id="business">
+    <div class="container">
+      <div class="section-header anim-fade">
+        <h2 class="section-title">AI Visuals for Products, Ads and Social Media</h2>
+        <p class="section-subtitle">The service helps you quickly prepare images for product cards, promos, banners, posts and visual ideas — right inside Telegram.</p>
+      </div>
+
+      <div class="business-grid anim-fade">
+        <div class="business-card">
+          <div class="business-icon" style="background: var(--accent-light-blue)">&#128230;</div>
+          <h4>Product Card</h4>
+        </div>
+        <div class="business-card">
+          <div class="business-icon" style="background: #FFF0F5">&#128248;</div>
+          <h4>Product Photography</h4>
+        </div>
+        <div class="business-card">
+          <div class="business-icon" style="background: var(--accent-cream)">&#128240;</div>
+          <h4>Ad Visual</h4>
+        </div>
+        <div class="business-card">
+          <div class="business-icon" style="background: #F3EEFF">&#128172;</div>
+          <h4>Social Media Content</h4>
+        </div>
+      </div>
+
+      <div class="business-cta">
+        <a href="https://t.me/ai_platform_image/236" class="btn btn-primary btn-lg" data-event="click_business_cta">
+          Create a Visual for Business
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     CREATORS (#creators)
+     ============================================================ -->
+  <section class="section creators-section" id="creators">
+    <div class="container">
+      <div class="creators-inner anim-fade">
+        <h2 class="section-title">Know How to Write Prompts?<br>Create Your Own Scenarios</h2>
+        <p>Generate an image from your own prompt and submit it to the sandbox. If users like the idea, it can be added to the public catalog, and the creator receives bonuses for usage.</p>
+
+        <div class="flow-diagram" aria-label="Creator path">
+          <div class="flow-step prompt">Prompt</div>
+          <span class="flow-arrow" aria-hidden="true">→</span>
+          <div class="flow-step image">Image</div>
+          <span class="flow-arrow" aria-hidden="true">→</span>
+          <div class="flow-step sandbox">Sandbox</div>
+          <span class="flow-arrow" aria-hidden="true">→</span>
+          <div class="flow-step votes">Votes</div>
+          <span class="flow-arrow" aria-hidden="true">→</span>
+          <div class="flow-step catalog">Catalog</div>
+        </div>
+
+        <div class="creators-cta">
+          <a href="https://t.me/ai_platform_image_bot" class="btn btn-primary btn-lg" data-event="click_creator_cta">
+            Create from Your Own Prompt
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     PRIVACY
+     ============================================================ -->
+  <section class="section" id="privacy">
+    <div class="container">
+      <div class="section-header anim-fade">
+        <h2 class="section-title">You Decide What to Do with the Result</h2>
+        <p class="section-subtitle">After generation you can save the image, regenerate, delete or publish it. Nothing is published without your choice.</p>
+      </div>
+
+      <div class="privacy-grid anim-fade">
+        <div class="privacy-card">
+          <div class="privacy-icon" style="background: var(--accent-light-blue); color: var(--accent-telegram);">&#128190;</div>
+          <h4>Save</h4>
+        </div>
+        <div class="privacy-card">
+          <div class="privacy-icon" style="background: #F3EEFF; color: var(--accent-violet);">&#128260;</div>
+          <h4>Regenerate</h4>
+        </div>
+        <div class="privacy-card">
+          <div class="privacy-icon" style="background: #FFF0F5; color: #E879A5;">&#128465;</div>
+          <h4>Delete</h4>
+        </div>
+        <div class="privacy-card">
+          <div class="privacy-icon" style="background: #E6F7EC; color: #10B981;">&#127760;</div>
+          <h4>Publish</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     FAQ (#faq)
+     ============================================================ -->
+  <section class="section" id="faq" style="background: var(--bg-alt)">
+    <div class="container">
+      <div class="section-header anim-fade">
+        <h2 class="section-title">Questions and Answers</h2>
+      </div>
+
+      <div class="faq-list anim-fade">
+        <details class="faq-item">
+          <summary class="faq-question">
+            Do I need to know how to write prompts?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </summary>
+          <div class="faq-answer">No. You can pick a ready-made example and recreate it with your own appearance. If you know how to write prompts, you can create an image from your own request.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            Where does the generation happen?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </summary>
+          <div class="faq-answer">In the Telegram bot. The website shows what is possible and quickly takes you to Telegram.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            Can I create product photos?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </summary>
+          <div class="faq-answer">Yes. You can create product cards, still-life visuals and images for ads, marketplaces, websites and social media.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            Can I restore an old photo?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </summary>
+          <div class="faq-answer">Yes. You can use AI scenarios to improve old, blurry or damaged photos.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            Are my photos published automatically?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </summary>
+          <div class="faq-answer">No. Results are only published if you choose to. After generation you can save, delete, regenerate or publish the image.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            What is the Sandbox?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </summary>
+          <div class="faq-answer">It is a section where users can submit their own ideas and images. If the community likes a piece, it can be promoted to the public catalog.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            Does the creator get bonuses?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </summary>
+          <div class="faq-answer">Yes. If a user scenario becomes popular and enters the catalog, the creator can receive bonuses for its usage.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            Can I create an image from my own prompt?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </summary>
+          <div class="faq-answer">Yes. There is a custom prompt mode for advanced users.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            Can I do an AI photoshoot?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </summary>
+          <div class="faq-answer">Yes. Pick a ready-made photoshoot style, upload your photo and get an image in the chosen look.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            Is the service suitable for business?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </summary>
+          <div class="faq-answer">Yes. The service can be used for product cards, still-life photography, ad images and social media content.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     FINAL CTA
+     ============================================================ -->
+  <section class="section final-cta-section" id="final-cta">
+    <div class="container">
+      <div class="final-cta-inner anim-fade">
+        <h2>Try Creating Your First AI Photo in Telegram</h2>
+        <p>Pick a ready-made look or start with your own prompt.</p>
+        <div class="btn-group" style="justify-content: center;">
+          <a href="https://t.me/ai_platform_image_bot" class="btn btn-primary btn-lg" data-event="click_final_cta">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.46-1.901-.903-1.056-.692-1.653-1.123-2.678-1.799-1.185-.781-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.015-.15-.055-.212s-.174-.05-.249-.029c-.105.024-1.785 1.135-5.039 3.332-.477.328-.909.487-1.296.479-.426-.01-1.246-.241-1.855-.44-.747-.243-1.342-.371-1.29-.784.027-.215.324-.435.889-.66 3.484-1.519 5.807-2.522 6.968-3.008 3.318-1.38 4.008-1.62 4.458-1.628.099-.002.32.023.464.139.12.098.153.228.169.32.016.092.036.302.02.466z"/></svg>
+            Open Telegram
+          </a>
+          <a href="#examples" class="btn btn-secondary btn-lg" data-event="click_final_cta_examples">See Examples</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============================================================
+   FOOTER
+   ============================================================ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span class="header-logo-icon" style="width:24px;height:24px;font-size:0.625rem;">AI</span>
+          AI Photo in Telegram
+        </div>
+        <p class="footer-tagline">AI photos in Telegram for you, business and ideas</p>
+      </div>
+
+      <nav class="footer-links" aria-label="Additional links">
+        <a href="https://t.me/ai_platform_image" target="_blank" rel="noopener">Telegram</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+      </nav>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 AI Photo. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+   SCRIPTS
+   ============================================================ -->
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109350622', 'ym');
+
+    ym(109350622, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/109350622" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<script>window._ymId = '109350622';</script>
+
+<script src="../js/main.js"></script>
+
+</body>
+</html>

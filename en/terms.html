@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+(function(){
+  if(sessionStorage.getItem('lang_override'))return;
+  var l=(navigator.language||'').toLowerCase();
+  if(l.startsWith('ru')){
+    location.replace(location.origin+location.pathname.replace('/en/','/'));
+  }
+})();
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Use — AI Photo in Telegram</title>
+  <meta name="robots" content="noindex, follow">
+  <link rel="alternate" hreflang="ru" href="https://aiplatformimage.online/terms.html">
+  <link rel="alternate" hreflang="en" href="https://aiplatformimage.online/en/terms.html">
+  <link rel="alternate" hreflang="x-default" href="https://aiplatformimage.online/terms.html">
+  <link rel="stylesheet" href="../css/style.css?v=15">
+</head>
+<body>
+
+<header class="site-header" id="header">
+  <div class="header-inner">
+    <a href="../index.html" class="header-logo">
+      <span class="header-logo-icon">AI</span>
+      AI Photo
+    </a>
+    <div class="header-cta-desktop">
+      <a href="../index.html" class="btn btn-secondary btn-sm">Home</a>
+      <a href="https://aiplatformimage.online/terms.html" class="lang-switch" onclick="sessionStorage.setItem('lang_override','1')">RU</a>
+    </div>
+  </div>
+</header>
+
+<main class="legal-page">
+  <div class="container legal-content">
+    <a href="../index.html" class="back-link">&#8592; Back</a>
+    <h1>Terms of Use</h1>
+    <p><em>Last updated: May 20, 2026</em></p>
+
+    <p>These Terms of Use ("Agreement") govern the use of the AI Photo service ("Service"), accessible through the website and Telegram bot. By using the Service, you accept the terms of this Agreement.</p>
+
+    <h2>1. Service Description</h2>
+    <p>AI Photo is a service for generating, processing, and transforming images using artificial intelligence technology. The Service operates inside Telegram and provides users access to ready-made AI photo creation scenarios, as well as the ability to create images from their own prompts.</p>
+
+    <h2>2. Terms of Use</h2>
+    <p>2.1. The Service is available to Telegram users. An active Telegram account is required to use the Service.<br>
+    2.2. The user agrees not to upload content that violates laws, third-party rights, or generally accepted standards.<br>
+    2.3. The user is responsible for images uploaded to the Service.<br>
+    2.4. The Service reserves the right to refuse service without explanation.</p>
+
+    <h2>3. Intellectual Property</h2>
+    <p>3.1. The user retains rights to their uploaded source images.<br>
+    3.2. AI-generated images are intended for personal and commercial use by the user.<br>
+    3.3. The Service may use anonymized generation examples in marketing materials and on the website, unless the user explicitly objects.</p>
+
+    <h2>4. Content Publishing</h2>
+    <p>4.1. Generation results are not published automatically. The user independently decides whether to publish.<br>
+    4.2. By publishing in the public forum sections, the user agrees that their work becomes visible to other users.<br>
+    4.3. The Service reserves the right to moderate published content.</p>
+
+    <h2>5. Scenarios and Creator Bonuses</h2>
+    <p>5.1. Users can create and submit their own images to the "Sandbox" for voting.<br>
+    5.2. If a work receives enough votes, it may be moved to the public catalog as a ready-made scenario.<br>
+    5.3. Specific terms for receiving bonuses and payouts for authors of popular scenarios are governed by separate provisions within the service and may be changed.</p>
+
+    <h2>6. Limitation of Liability</h2>
+    <p>6.1. The Service is provided "as is." We do not guarantee error-free operation of the service or specific generation results.<br>
+    6.2. The quality of AI generation depends on many factors, including the quality of the source image and the complexity of the request.<br>
+    6.3. The Service is not responsible for losses arising from the use or inability to use the service.</p>
+
+    <h2>7. Changes to the Agreement</h2>
+    <p>We reserve the right to make changes to this Agreement. Changes take effect upon publication of the updated version. We recommend periodically checking the relevance of the Agreement.</p>
+
+    <h2>8. Contacts</h2>
+    <p>For any questions regarding the Agreement, please contact us through the Telegram bot or the service forum.</p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <p>&copy; 2026 AI Photo. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
