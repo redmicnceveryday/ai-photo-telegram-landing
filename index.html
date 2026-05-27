@@ -41,117 +41,162 @@
   <meta name="twitter:description" content="Повторите красивый образ, восстановите фото или создайте изображение по своему промпту.">
 
   <!-- JSON-LD Structured Data -->
+
+  <!-- SoftwareApplication + Organization -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@graph": [
+    "@type": "SoftwareApplication",
+    "name": "AI Photo",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "Telegram",
+    "url": "https://t.me/ai_platform_image_bot",
+    "description": "AI-фото в Telegram: фотосессии, аватары, карточки товара и восстановление фото.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "RUB"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://aiplatformimage.online/#organization",
+      "name": "AI Photo",
+      "url": "https://aiplatformimage.online/",
+      "sameAs": [
+        "https://t.me/ai_platform_image",
+        "https://t.me/ai_platform_image_bot"
+      ]
+    }
+  }
+  </script>
+
+  <!-- WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://aiplatformimage.online/#website",
+    "url": "https://aiplatformimage.online/",
+    "name": "AI Photo в Telegram",
+    "description": "AI-фото в Telegram для себя, бизнеса и идей.",
+    "inLanguage": "ru"
+  }
+  </script>
+
+  <!-- FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
       {
-        "@type": "WebSite",
-        "@id": "https://aiplatformimage.online/#website",
-        "url": "https://aiplatformimage.online/",
-        "name": "AI Photo в Telegram",
-        "description": "AI-фото в Telegram для себя, бизнеса и идей.",
-        "inLanguage": "ru"
-      },
-      {
-        "@type": "SoftwareApplication",
-        "@id": "https://aiplatformimage.online/#software",
-        "name": "AI Photo в Telegram",
-        "applicationCategory": "MultimediaApplication",
-        "operatingSystem": "Telegram",
-        "description": "Telegram-сервис для создания AI-фото, AI-фотосессий, аватаров, карточек товара, восстановления фото и изображений по промпту.",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD",
-          "description": "Переход в Telegram. Оплата генераций может происходить внутри сервиса."
+        "@type": "Question",
+        "name": "Нужно ли уметь писать промпты?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Нет. Можно выбрать готовый пример и повторить его со своей внешностью. Если вы умеете писать промпты, можно создать изображение по своему запросу."
         }
       },
       {
-        "@type": "FAQPage",
-        "@id": "https://aiplatformimage.online/#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Нужно ли уметь писать промпты?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Нет. Можно выбрать готовый пример и повторить его со своей внешностью. Если вы умеете писать промпты, можно создать изображение по своему запросу."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Где происходит генерация?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "В Telegram-боте. Сайт нужен, чтобы показать возможности и быстро перевести пользователя в Telegram."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Можно ли сделать фото товара?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Да. Можно создавать карточки товаров, предметные визуалы и изображения для рекламы, маркетплейсов, сайта и соцсетей."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Можно ли восстановить старое фото?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Да. Можно использовать AI-сценарии для улучшения старых, размытых или повреждённых снимков."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Мои фото публикуются автоматически?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Нет. Результат публикуется только по вашему выбору. После генерации можно сохранить, удалить, перегенерировать или опубликовать изображение."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Что такое песочница?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Это раздел, куда пользователи могут отправлять свои идеи и изображения. Если работа нравится другим пользователям, она может попасть в общий каталог."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Автор получает бонусы?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Да. Если пользовательский сценарий становится популярным и попадает в каталог, автор может получать бонусы за использование."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Можно ли создать изображение по своему промпту?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Да. Для продвинутых пользователей есть режим собственного промпта."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Можно ли сделать AI-фотосессию?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Да. Можно выбрать готовый стиль фотосессии, загрузить своё фото и получить изображение в выбранном образе."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Сервис подходит для бизнеса?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Да. Сервис можно использовать для карточек товара, предметной съёмки, рекламных изображений и контента для соцсетей."
-            }
-          }
-        ]
+        "@type": "Question",
+        "name": "Где происходит генерация?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "В Telegram-боте. Сайт нужен, чтобы показать возможности и быстро перевести пользователя в Telegram."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Можно ли сделать фото товара?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Да. Можно создавать карточки товаров, предметные визуалы и изображения для рекламы, маркетплейсов, сайта и соцсетей."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Можно ли восстановить старое фото?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Да. AI-сценарии позволяют улучшить старые, размытые или повреждённые снимки."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Мои фото публикуются автоматически?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Нет. Результат публикуется только по вашему выбору. После генерации можно сохранить, удалить, перегенерировать или опубликовать."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Что такое песочница?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Это раздел, куда пользователи могут отправлять свои идеи и изображения. Если работа нравится другим пользователям, она может попасть в общий каталог."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Автор получает бонусы?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Да. Если пользовательский сценарий становится популярным и попадает в каталог, автор может получать бонусы за использование."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Можно ли создать изображение по своему промпту?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Да. Для продвинутых пользователей есть режим собственного промпта."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Можно ли сделать AI-фотосессию?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Да. Можно выбрать готовый стиль фотосессии, загрузить своё фото и получить изображение в выбранном образе."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Сервис подходит для бизнеса?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Да. Сервис используется для карточек товара, предметной съёмки, рекламных изображений и контента для соцсетей."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- HowTo -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Как создать AI-фото в Telegram",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Выберите пример",
+        "text": "В галерее собраны готовые образы, стили и сценарии."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Нажмите Хочу также",
+        "text": "Бот откроет нужный сценарий автоматически."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Загрузите фото и получите результат",
+        "text": "Сервис создаст вашу версию изображения прямо в Telegram."
       }
     ]
   }
@@ -276,22 +321,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="hero-card-overlay"><span>Хочу также</span></div>
             <span class="hero-card-label">AI-фотосессия</span>
           </a>
-          <!-- 2. Восстановить фото (Photo Restoration) -->
-          <a href="https://t.me/ai_platform_image_bot?start=scenario_photo-restoration" class="hero-card" data-event="click_example_card" data-card="restore_photo">
+          <!-- 2. Восстановить фото -->
+          <a href="vosstanovlenie-foto/" class="hero-card" data-event="click_service_card" data-card="restore_photo">
             <img src="images/examples/restore-photo.webp" alt="Восстановление старого семейного фото с помощью AI" loading="eager">
-            <div class="hero-card-overlay"><span>Хочу также</span></div>
+            <div class="hero-card-overlay"><span>Подробнее</span></div>
             <span class="hero-card-label">Старое фото</span>
           </a>
-          <!-- 3. Карточка товара (Product Card) -->
-          <a href="https://t.me/ai_platform_image_bot?start=scenario_product-card" class="hero-card" data-event="click_example_card" data-card="product_card">
+          <!-- 3. Карточка товара -->
+          <a href="kartochka-tovara/" class="hero-card" data-event="click_service_card" data-card="product_card">
             <img src="images/examples/product-card.webp" alt="Карточка товара для маркетплейса, созданная с помощью AI" loading="eager">
-            <div class="hero-card-overlay"><span>Хочу также</span></div>
+            <div class="hero-card-overlay"><span>Подробнее</span></div>
             <span class="hero-card-label">Карточка товара</span>
           </a>
-          <!-- 4. Аватар (2D Pixar Avatar) -->
-          <a href="https://t.me/ai_platform_image_bot?start=scenario_2d-pixar-avatar" class="hero-card" data-event="click_example_card" data-card="avatar">
+          <!-- 4. Аватар -->
+          <a href="ai-avatar/" class="hero-card" data-event="click_service_card" data-card="avatar">
             <img src="images/examples/avatar.webp" alt="AI-аватар для Telegram по фотографии" loading="eager">
-            <div class="hero-card-overlay"><span>Хочу также</span></div>
+            <div class="hero-card-overlay"><span>Подробнее</span></div>
             <span class="hero-card-label">Аватар</span>
           </a>
           <!-- 5. Fashion-образ -->

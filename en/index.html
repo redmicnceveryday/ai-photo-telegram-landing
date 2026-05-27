@@ -41,117 +41,162 @@
   <meta name="twitter:description" content="Recreate a beautiful look, restore a photo or generate an image from your own prompt.">
 
   <!-- JSON-LD Structured Data -->
+
+  <!-- SoftwareApplication + Organization -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@graph": [
+    "@type": "SoftwareApplication",
+    "name": "AI Photo",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "Telegram",
+    "url": "https://t.me/ai_platform_image_bot",
+    "description": "AI photos in Telegram: photoshoots, avatars, product cards and photo restoration.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "RUB"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://aiplatformimage.online/#organization",
+      "name": "AI Photo",
+      "url": "https://aiplatformimage.online/",
+      "sameAs": [
+        "https://t.me/ai_platform_image",
+        "https://t.me/ai_platform_image_bot"
+      ]
+    }
+  }
+  </script>
+
+  <!-- WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://aiplatformimage.online/en/#website",
+    "url": "https://aiplatformimage.online/en/",
+    "name": "AI Photo in Telegram",
+    "description": "AI photos in Telegram for you, your business and ideas.",
+    "inLanguage": "en"
+  }
+  </script>
+
+  <!-- FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
       {
-        "@type": "WebSite",
-        "@id": "https://aiplatformimage.online/en/#website",
-        "url": "https://aiplatformimage.online/en/",
-        "name": "AI Photo in Telegram",
-        "description": "AI photos in Telegram for you, your business and ideas.",
-        "inLanguage": "en"
-      },
-      {
-        "@type": "SoftwareApplication",
-        "@id": "https://aiplatformimage.online/en/#software",
-        "name": "AI Photo in Telegram",
-        "applicationCategory": "MultimediaApplication",
-        "operatingSystem": "Telegram",
-        "description": "Telegram service for creating AI photos, AI photoshoots, avatars, product cards, photo restoration and images from prompts.",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD",
-          "description": "Go to Telegram. Payment for generations may occur inside the service."
+        "@type": "Question",
+        "name": "Do I need to know how to write prompts?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. You can pick a ready-made example and recreate it with your own appearance. If you know how to write prompts, you can create an image from your own request."
         }
       },
       {
-        "@type": "FAQPage",
-        "@id": "https://aiplatformimage.online/en/#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Do I need to know how to write prompts?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No. You can pick a ready-made example and recreate it with your own appearance. If you know how to write prompts, you can create an image from your own request."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Where does the generation happen?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "In the Telegram bot. The website shows what is possible and quickly takes you to Telegram."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can I create product photos?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. You can create product cards, still-life visuals and images for ads, marketplaces, websites and social media."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can I restore an old photo?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. You can use AI scenarios to improve old, blurry or damaged photos."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Are my photos published automatically?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No. Results are only published if you choose to. After generation you can save, delete, regenerate or publish the image."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the Sandbox?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "It is a section where users can submit their own ideas and images. If the community likes a piece, it can be promoted to the public catalog."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Does the creator get bonuses?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. If a user scenario becomes popular and enters the catalog, the creator can receive bonuses for its usage."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can I create an image from my own prompt?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. There is a custom prompt mode for advanced users."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can I do an AI photoshoot?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Pick a ready-made photoshoot style, upload your photo and get an image in the chosen look."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is the service suitable for business?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. The service can be used for product cards, still-life photography, ad images and social media content."
-            }
-          }
-        ]
+        "@type": "Question",
+        "name": "Where does the generation happen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In the Telegram bot. The website shows what is possible and quickly takes you to Telegram."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I create product photos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. You can create product cards, still-life visuals and images for ads, marketplaces, websites and social media."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I restore an old photo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. AI scenarios allow you to improve old, blurry or damaged photos."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are my photos published automatically?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Results are only published if you choose to. After generation you can save, delete, regenerate or publish."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the Sandbox?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It is a section where users can submit their own ideas and images. If the community likes a piece, it can be promoted to the public catalog."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does the creator get bonuses?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. If a user scenario becomes popular and enters the catalog, the creator can receive bonuses for its usage."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I create an image from my own prompt?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. There is a custom prompt mode for advanced users."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I do an AI photoshoot?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Pick a ready-made photoshoot style, upload your photo and get an image in the chosen look."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the service suitable for business?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The service is used for product cards, still-life photography, ad images and social media content."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- HowTo -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Create AI Photos in Telegram",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Pick an example",
+        "text": "The gallery has ready-made looks, styles and scenarios."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Tap I want this too",
+        "text": "The bot opens the right scenario automatically."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Upload a photo and get the result",
+        "text": "The service creates your version of the image right in Telegram."
       }
     ]
   }
@@ -276,22 +321,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="hero-card-overlay"><span>I want this too</span></div>
             <span class="hero-card-label">AI Photoshoot</span>
           </a>
-          <!-- 2. Restore Photo (Photo Restoration) -->
-          <a href="https://t.me/ai_platform_image_bot?start=scenario_photo-restoration" class="hero-card" data-event="click_example_card" data-card="restore_photo">
+          <!-- 2. Restore Photo -->
+          <a href="../vosstanovlenie-foto/" class="hero-card" data-event="click_service_card" data-card="restore_photo">
             <img src="../images/examples/restore-photo.webp" alt="Old family photo restored with AI" loading="eager">
-            <div class="hero-card-overlay"><span>I want this too</span></div>
+            <div class="hero-card-overlay"><span>Learn more</span></div>
             <span class="hero-card-label">Old Photo</span>
           </a>
           <!-- 3. Product Card -->
-          <a href="https://t.me/ai_platform_image_bot?start=scenario_product-card" class="hero-card" data-event="click_example_card" data-card="product_card">
+          <a href="../kartochka-tovara/" class="hero-card" data-event="click_service_card" data-card="product_card">
             <img src="../images/examples/product-card.webp" alt="Product card for a marketplace, created with AI" loading="eager">
-            <div class="hero-card-overlay"><span>I want this too</span></div>
+            <div class="hero-card-overlay"><span>Learn more</span></div>
             <span class="hero-card-label">Product Card</span>
           </a>
-          <!-- 4. Avatar (2D Pixar Avatar) -->
-          <a href="https://t.me/ai_platform_image_bot?start=scenario_2d-pixar-avatar" class="hero-card" data-event="click_example_card" data-card="avatar">
+          <!-- 4. Avatar -->
+          <a href="../ai-avatar/" class="hero-card" data-event="click_service_card" data-card="avatar">
             <img src="../images/examples/avatar.webp" alt="AI avatar for Telegram from a photo" loading="eager">
-            <div class="hero-card-overlay"><span>I want this too</span></div>
+            <div class="hero-card-overlay"><span>Learn more</span></div>
             <span class="hero-card-label">Avatar</span>
           </a>
           <!-- 5. Fashion Look -->
